@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Image from "./Image";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+
 const PostListItems = () => {
   return (
     <div className="flex flex-col xl:flex-row gap-8">
@@ -15,17 +17,23 @@ const PostListItems = () => {
         </Link>
         <div className="flex items-center gap-2 text-grey-400 text-sm">
           <span>Written by</span>
-          <Link className="text-blue-800">John Doe</Link>
+          <Link className="text-gray-800 font-bold">John Doe</Link>
           <span>on</span>
-          <Link className="text-blue-800">Web Design</Link>
-          <span>2 days ago</span>
+          <Link className="text-gray-800 font-bold">Web Design</Link>
+          <span className="text-gray-600"> • 2d</span>
         </div>
-        <p>
+        <p className="text-justify">
           Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
+          kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
+          nlcsnlicn islncjs nincksn ocjslinckjsnc.Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
+          kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
+          nlcsnlicn islncjs nincksn ocjslinckjsnc. Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
+          kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
+          nlcsnlicn islncjs nincksn ocjslinckjsnc. Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
           kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
           nlcsnlicn islncjs nincksn ocjslinckjsnc.
         </p>
-        <Link to="/post" className="underline text-blue-800 text-sm">Read More</Link>
+        <Link to="/post" className="text-gray-800 font-bold text-sm flex items-center gap-2">Read More <MdKeyboardDoubleArrowRight /></Link>
       </div>
     </div>
   );

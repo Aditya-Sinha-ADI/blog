@@ -2,7 +2,7 @@ import Image from "./Image";
 
 const Comment = () => {
   return (
-    <div className="p-4 bg-slate-50 rounded-xl mb-8">
+    <div className="p-4 bg-slate-50 rounded-xl my-4 bg-gray-100">
       <div className="flex items-center gap-4">
         <Image
           src="userImg.jpeg"
@@ -10,7 +10,7 @@ const Comment = () => {
           w="40"
         />
         <span className="font-medium">John Doe</span>
-        <span className="text-sm text-grey-500">2 days ago</span>
+        <span className="text-sm text-gray-500">2 days ago</span>
       </div>
       <div className="mt-4">
         <p>

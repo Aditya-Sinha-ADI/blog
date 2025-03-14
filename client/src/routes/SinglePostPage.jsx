@@ -3,10 +3,15 @@ import Image from "../components/Image";
 import PostMenuActions from "../components/PostMenuActions";
 import Search from "../components/Search";
 import Comments from "../components/Comments";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 const SinglePostPage = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 my-10">
       <div className="flex gap-8">
         <div className="lg:w-3/5 flex flex-col gap-8">
           <h1 className="text-xl md:text-3xl xl:text-4xl 2xl:text-5xl font-semibold">
@@ -14,17 +19,21 @@ const SinglePostPage = () => {
           </h1>
           <div className="flex items-center gap-2 text-gray-400 text-sm">
             <span>Written by</span>
-            <Link className="text-blue-800">John Doe</Link>
+            <Link className="text-gray-600 font-semibold">John Doe</Link>
             <span>on</span>
-            <Link className="text-blue-800">Web Design</Link>
+            <Link className="text-gray-600 font-semibold">Web Design</Link>
             <span>2 days ago</span>
           </div>
           <p className="text-gray-500 font-medium text-justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
-            commodi voluptatum explicabo. Necessitatibus accusamus illum
-            aperiam, hic iusto omnis aliquam non delectus ratione. Quo officiis
-            fugit provident itaque qui corrupti laboriosam natus soluta numquam
-            officia?
+            Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
+            kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
+            nlcsnlicn islncjs nincksn ocjslinckjsnc.Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
+            kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
+            nlcsnlicn islncjs nincksn ocjslinckjsnc. Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
+            kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
+            nlcsnlicn islncjs nincksn ocjslinckjsnc. Lorem meomc, moem dwedkw hescns. cseclisn isenln, cisinclinsln ilsncn
+            kucsdcb isejdinbn kncskncs. snclisnclis ilsncns socslincsn olsmocjos.
+            nlcsnlicn islncjs nincksn ocjslinckjsnc.
           </p>
         </div>
         <div className="hidden lg:block w-2/5">
@@ -101,7 +110,29 @@ const SinglePostPage = () => {
         {/* menu */}
 
         <div className="px-4 h-max sticky top-8">
-          <h1 className="mb-4 text-sm font-medium">Author</h1>
+          <PostMenuActions />
+          <h1 className="my-4 text-sm font-medium">Categories</h1>
+          <div className="flex flex-col gap-2 text-sm">
+            <Link className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-500 after:transition-all after:duration-300 hover:after:w-full">All</Link>
+            <Link className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-500 after:transition-all after:duration-300 hover:after:w-full" to="/">
+              Web Design
+            </Link>
+            <Link className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-500 after:transition-all after:duration-300 hover:after:w-full" to="/">
+              Developement
+            </Link>
+            <Link className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-500 after:transition-all after:duration-300 hover:after:w-full" to="/">
+              Databases
+            </Link>
+            <Link className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-500 after:transition-all after:duration-300 hover:after:w-full" to="/">
+              Search Engines
+            </Link>
+            <Link className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-gray-500 after:transition-all after:duration-300 hover:after:w-full" to="/">
+              Marketing
+            </Link>
+          </div>
+          <h1 className="mt-8 mb-4 text-sm font-medium">Search</h1>
+          <Search />
+          <h1 className="mb-4 mt-8 text-sm font-medium">Author</h1>
           <div className="flex flex-col gap-4 ">
             <div className="flex items-center gap-8">
               <Image
@@ -110,40 +141,27 @@ const SinglePostPage = () => {
                 h="48"
                 w="48"
               />
-              <Link className="text-blue-800">John Doe</Link>
+              <Link className="text-gray-600 font-semibold">John Doe</Link>
             </div>
             <p className="text-sm text-grey-500">Lorem ipsum dolor sit amet.</p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 md:gap-4">
               <Link>
-                <Image src="facebook.svg" />
+                <MdEmail className="text-2xl md:text-3xl"/>
               </Link>
               <Link>
-                <Image src="instagram.svg" />
+                <FaLinkedinIn className="text-2xl md:text-3xl"/>
+              </Link>
+              <Link>
+                <FaXTwitter className="text-2xl md:text-3xl"/>
+              </Link>
+              <Link>
+                <FaFacebook className="text-2xl md:text-3xl"/>
+              </Link>
+              <Link>
+                <FaInstagram className="text-2xl md:text-3xl"/>
               </Link>
             </div>
           </div>
-          <PostMenuActions />
-          <h1 className="mt-8 mb-4 text-sm font-medium">Catagories</h1>
-          <div className="flex flex-col gap-2 text-sm">
-            <Link className="underline">All</Link>
-            <Link className="underline" to="/">
-              Web Design
-            </Link>
-            <Link className="underline" to="/">
-              Developement
-            </Link>
-            <Link className="underline" to="/">
-              Databases
-            </Link>
-            <Link className="underline" to="/">
-              Search Engines
-            </Link>
-            <Link className="underline" to="/">
-              Marketing
-            </Link>
-          </div>
-          <h1 className="mt-8 mb-4 text-sm font-medium">Search</h1>
-          <Search />
         </div>
       </div>
       <Comments />

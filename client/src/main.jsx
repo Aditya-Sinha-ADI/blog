@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -20,12 +21,12 @@ if (!PUBLISHABLE_KEY) {
 
 const router = createBrowserRouter([
   {
-    element: <MainLayout />,
+    path: "/", 
+    element: <HomePage />, // HomePage has no layout
+  },
+  {
+    element: <MainLayout />, // Everything else uses MainLayout
     children: [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
       {
         path: "/posts",
         element: <PostListPage />,
@@ -57,7 +58,18 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-      <RouterProvider router={router} />
+      {/* ✅ Wrap everything inside the Scrollbars component */}
+      <Scrollbars 
+        autoHide
+        autoHideTimeout={1000}
+        autoHideDuration={200}
+        style={{ width: "100vw", height: "100vh" }}
+        renderThumbVertical={(props) => (
+          <div {...props} style={{ backgroundColor: "#888", borderRadius: "8px", width: "18px" }} />
+        )}
+      >
+        <RouterProvider router={router} />
+      </Scrollbars>
     </ClerkProvider>
   </StrictMode>
 );

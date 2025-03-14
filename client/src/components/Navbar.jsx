@@ -13,10 +13,9 @@ const Navbar = () => {
   return (
     <div className="w-full h-16 md:h-20 flex items-center justify-between">
       {/* LOGO*/}
-      <div className="flex items-center gap-4 text-2xl font-bold">
-        <Image src="logo.png" alt="Lama logo" w={32} h={32} />
-        <span>lama logo</span>
-      </div>
+      <Link to="/" className="flex items-center gap-4 font-bold">
+        <img src="trybods-logo-black-removedbg.png" alt="trybods logo" className="w-32 h-32"/>
+      </Link>
 
       {/* Mobile Menu*/}
       <div className="md:hidden">
@@ -33,12 +32,10 @@ const Navbar = () => {
             open ? "-right-0" : "-right-[100%]"
           }`}
         >
-          <Link to="/">Home</Link>
           <Link to="/">Trending</Link>
           <Link to="/">Most Popular</Link>
-          <Link to="/">About</Link>
           <Link to="">
-            <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">
+            <button className="py-2 px-4 rounded-3xl bg-gray-800 text-white">
               Login
             </button>
           </Link>
@@ -47,14 +44,12 @@ const Navbar = () => {
 
       {/* Desktop Menu*/}
       <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
-        <Link to="/">Home</Link>
         <Link to="/">Trending</Link>
         <Link to="/">Most Popular</Link>
-        <Link to="/">About</Link>
 
         <SignedOut>
           <Link to="/login">
-            <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">
+            <button className="py-2 px-4 rounded-3xl bg-gray-800 text-white">
               Login
             </button>
           </Link>

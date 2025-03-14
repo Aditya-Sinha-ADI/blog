@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 body{
-    background-color: #e6e6ff;
+    background-color: #e4e2dd;
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    background-position: center;
+    background-attachment: fixed;
     width: 100vw;
     overflow-x: hidden;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .animatedButton{
